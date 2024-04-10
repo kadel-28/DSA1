@@ -16,7 +16,10 @@ class LinkedList {
         Node* HEAD;
         Node* TAIL;
     public:
-        LinkedList (Node){}
+        LinkedList () {
+            
+        }
+        ~LinkedList();
         bool isEmpty();
         void addtoHead(int data);
         void addtoTail(int data);
