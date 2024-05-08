@@ -1,4 +1,4 @@
-#include<iostream> //header file for standard innput and output
+ //header file for standard innput and output
 
 //node class to create node for linked list
 class Node {
