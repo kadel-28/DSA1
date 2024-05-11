@@ -9,7 +9,7 @@ void ArrayQueue::isEmpty()
 
 void ArrayQueue::isFull()
 {
-    if (rear==maxqueuesize-1) std::cout<<"Queue is Full"<<std::endl;
+    if (rear+1==maxqueuesize) std::cout<<"Queue is Full"<<std::endl;
     else std::cout<<"Queue is not Full"<<std::endl;
 }
 void ArrayQueue::displayfront()
@@ -43,6 +43,7 @@ void ArrayQueue::dequeue()
 {
     front++;
     std::cout<<"The dequeued element is "<<data[front]<<std::endl;
+    if (rear==maxqueuesize-1 && front==rear) {front=rear=-1;}
 }
 void ArrayQueue::queueprint()
 {
@@ -52,7 +53,7 @@ void ArrayQueue::queueprint()
         std::cout<<"Your Queue is "<<std::endl;
         for (int i=0;i<=rear;i++)
         {
-            std::cout<<data[rear]<<"\t";
+            std::cout<<data[i]<<"\t";
         }
         std::cout<<std::endl;
     }

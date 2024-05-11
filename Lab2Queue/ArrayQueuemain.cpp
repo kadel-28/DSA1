@@ -9,18 +9,19 @@ int main()
     q->enqueue(56);
     q->enqueue(67);
     q->enqueue(12);
+    q->isFull();
     q->enqueue(23);
     q->enqueue(48);
     q->queueprint();
-    q->isFull();
     q->dequeue();
     q->dequeue();
     q->displayfront();
     q->displayrear();
+    q->dequeue();
     q->isFull();
     q->dequeue();
     q->dequeue();
-    q->dequeue();
+    q->isFull();
     q->isEmpty();
     return 0;
 }
